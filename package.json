@@ -1,0 +1,17 @@
+{
+  "name": "node-elasticbeanstalk",
+  "version": "1.0.0",
+  "description": "AWS Elastic Beanstalk tools",
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.0"
+  },
+  "author": {
+    "name": "Alexis Kofman",
+    "email": "alexis.kofman@gmail.com",
+    "url": "http://twitter.com/alexiskofman"
+  },
+  "license": "MIT"
+}

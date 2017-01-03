@@ -15,7 +15,7 @@ module.exports = (environment, opts) => {
 
   opts = opts || {};
 
-  AWS.config= {
+  AWS.config = {
     region: opts.region || process.env.AWS_REGION
   };
 
@@ -24,11 +24,11 @@ module.exports = (environment, opts) => {
       environment
     ]
   }, (err, data) => {
-    if(err) {
+    if (err) {
       throw err;
     }
 
-    if(data.Environments.length) {
+    if (data.Environments.length) {
       const applicationName = data.Environments[0].ApplicationName;
       const applicationVersion = `app-${dateFns.format(new Date(), 'YYMMDD_HHmmss')}`;
 
@@ -36,7 +36,7 @@ module.exports = (environment, opts) => {
         ApplicationName: applicationName,
         VersionLabels: [ data.Environments[0].VersionLabel ]
       }, (err, data) => {
-        if(err) {
+        if (err) {
           throw err;
         }
 
@@ -63,7 +63,7 @@ module.exports = (environment, opts) => {
           });
 
           archive.pipe(writeStream);
-          archive.directory(folder?`${tmpobj.name}/${folder}`:tmpobj.name, '.').finalize();
+          archive.directory(folder ? `${tmpobj.name}/${folder}` : tmpobj.name, '.').finalize();
 
           writeStream.on('close', () => {
             const s3Bucket = data.ApplicationVersions[0].SourceBundle.S3Bucket;
@@ -115,4 +115,4 @@ module.exports = (environment, opts) => {
       throw new Error(`There is no existing environment named '${environment}'`);
     }
   });
-}
+};
