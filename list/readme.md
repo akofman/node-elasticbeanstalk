@@ -13,7 +13,7 @@ $ npm install --save node-elasticbeanstalk-list
 ## Usage
 
 ```js
-const eblist= require('node-elasticbeanstalk-list');
+const eblist = require('node-elasticbeanstalk-list');
 
 eblist().then((apps) => {
   console.log(apps);

@@ -1,7 +1,7 @@
 {
   "name": "node-elasticbeanstalk-terminate",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "AWS Elastic Beanstalk CLI and API to terminate a specified environment",
   "license": "MIT",
   "repository": "akofman/node-elasticbeanstalk",
   "author": {

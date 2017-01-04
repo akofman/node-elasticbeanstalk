@@ -13,7 +13,7 @@ $ npm install --save node-elasticbeanstalk-deploy
 ## Usage
 
 ```js
-const ebdeploy= require('node-elasticbeanstalk-deploy');
+const ebdeploy = require('node-elasticbeanstalk-deploy');
 
 ebdeploy('unicorns', {
   src: 'https://github.com/akofman/unicorns.git'

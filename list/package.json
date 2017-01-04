@@ -1,7 +1,7 @@
 {
   "name": "node-elasticbeanstalk-list",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "AWS Elastic Beanstalk CLI and API to list applications and environments",
   "license": "MIT",
   "repository": "akofman/node-elasticbeanstalk",
   "author": {
