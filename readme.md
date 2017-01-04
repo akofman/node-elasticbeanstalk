@@ -1,4 +1,4 @@
-# node-elasticbeanstalk
+# node-elasticbeanstalk [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk)
 
 This is an opinionated bunch of Elastic Beanstalk tools.
 

@@ -1,4 +1,4 @@
-# node-elasticbeanstalk-terminate [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk-terminate.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk-terminate)
+# node-elasticbeanstalk-terminate
 
 >
 

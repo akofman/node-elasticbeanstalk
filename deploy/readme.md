@@ -1,4 +1,4 @@
-# node-elasticbeanstalk-deploy [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk-deploy.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk-deploy)
+# node-elasticbeanstalk-deploy
 
 >
 
