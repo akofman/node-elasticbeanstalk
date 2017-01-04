@@ -4,8 +4,6 @@ const archiver = require('archiver');
 const fs = require('fs');
 const dateFns = require('date-fns');
 const AWS = require('aws-sdk');
-const eb = new AWS.ElasticBeanstalk();
-const s3 = new AWS.S3();
 const rimraf = require('rimraf');
 
 module.exports = (environment, opts) => {
@@ -19,6 +17,9 @@ module.exports = (environment, opts) => {
     AWS.config = {
       region: opts.region || process.env.AWS_REGION
     };
+
+    const eb = new AWS.ElasticBeanstalk();
+    const s3 = new AWS.S3();
 
     eb.describeEnvironments({
       EnvironmentNames: [

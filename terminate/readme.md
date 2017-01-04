@@ -1,4 +1,4 @@
-# node-elasticbeanstalk-deploy [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk-deploy.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk-deploy)
+# node-elasticbeanstalk-terminate [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk-terminate.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk-terminate)
 
 >
 
@@ -13,31 +13,38 @@ $ npm install --save node-elasticbeanstalk-terminate
 ## Usage
 
 ```js
-const ebterminate= require('node-elasticbeanstalk-terminate');
+const ebterminate = require('node-elasticbeanstalk-terminate');
 
-ebterminate('unicorns');
+ebdterminate('unicorns').then((result) => {
+  console.log(result);
+}).catch((err) => {
+  console.log(err);
+});
 ```
 
 
 ## API
 
-### ebdterminate(environment, [options])
+### ebterminate(environment, [options]) => `promise`
 
 #### environment
 
 Type: `string`
 
-Lorem ipsum.
+The Elastic Beanstalk environment to terminate.
 
 #### options
 
-##### foo
+##### region
 
-Type: `boolean`<br>
-Default: `false`
+Type: `string`<br>
 
-Lorem ipsum.
+The region where your Elastic Beanstalk is deployed. This is an optional parameter because it should be defined from
+the `AWS_REGION` env variable, but for some cases it could be convenient to override it.
 
+#### promise
+
+The returned promise give access to a sum-up of what is being terminated.
 
 ## CLI
 
@@ -49,16 +56,14 @@ $ npm install --global node-elasticbeanstalk-terminate
 $ ebterminate --help
 
   Usage
-    ebdeploy [input]
+    ebterminate [input]
 
   Options
-    --foo  Lorem ipsum [Default: false]
+    --region the region where the Elastic Beanstalk is deployed.
 
   Examples
-    $ <%= moduleName %>
-    unicorns & rainbows
-    $ <%= moduleName %> ponies
-    ponies & rainbows
+    $ ebterminate unicorns
+    $ ebterminate unicorns --region eu-west-1
 ```
 
 
