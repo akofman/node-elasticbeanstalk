@@ -9,6 +9,7 @@ const cli = meow(`
 
   Options
     --src  the location of the sources to deploy. This could be a local location or a git repository. By default it will take the current path.
+    --region  the region where the Elastic Beanstalk is deployed.
 
   Examples
     $ ebdeploy unicorns
@@ -17,4 +18,8 @@ const cli = meow(`
     $ ebdeploy unicorns --src https://github.com/akofman/unicorns.git:www
 `);
 
-deploy(cli.input[0], {src: cli.flags.src});
+deploy(cli.input[0], {src: cli.flags.src}).then((result) => {
+  console.log(result);
+}).catch((err) => {
+  console.log(err);
+});
