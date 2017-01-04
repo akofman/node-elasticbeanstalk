@@ -9,7 +9,9 @@
     "email": "alexis.kofman@gmail.com",
     "url": "http://twitter.com/alexiskofman"
   },
-  "bin": "eblist.js",
+  "bin": {
+    "eblist": "eblist.js"
+  },
   "engines": {
     "node": ">=4"
   },

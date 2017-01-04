@@ -9,7 +9,9 @@
     "email": "alexis.kofman@gmail.com",
     "url": "http://twitter.com/alexiskofman"
   },
-  "bin": "ebdeploy.js",
+  "bin": {
+    "ebdeploy": "ebdeploy.js"
+  },
   "engines": {
     "node": ">=4"
   },
