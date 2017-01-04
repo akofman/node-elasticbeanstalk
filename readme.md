@@ -15,6 +15,7 @@ This repository is managed as a monorepository and it's composed of the followin
 | [`node-elasticbeanstalk-list`](/list) | [![npm](https://img.shields.io/npm/v/node-elasticbeanstalk-list.svg?maxAge=2592000)](https://www.npmjs.com/package/node-elasticbeanstalk-list) |
 | [`node-elasticbeanstalk-terminate`](/terminate) | [![npm](https://img.shields.io/npm/v/node-elasticbeanstalk-terminate.svg?maxAge=2592000)](https://www.npmjs.com/package/node-elasticbeanstalk-terminate) |
 
+Of course in order to use these tools you need an AWS account and to configure your [credentials](http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html).
 
 ## License
 
