@@ -1,0 +1,30 @@
+{
+  "name": "node-elasticbeanstalk-list",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "akofman/node-elasticbeanstalk",
+  "author": {
+    "name": "Alexis Kofman",
+    "email": "alexis.kofman@gmail.com",
+    "url": "http://twitter.com/alexiskofman"
+  },
+  "bin": "eblist.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js",
+    "list.js"
+  ],
+  "keywords": [
+    "cli",
+    "cli-app",
+    "aws",
+    "elasticbeanstalk",
+    "elasticbeanstalk-list"
+  ],
+  "dependencies": {
+    "aws-sdk": "2.7.15"
+  }
+}
