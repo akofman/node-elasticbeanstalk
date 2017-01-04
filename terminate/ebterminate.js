@@ -15,4 +15,8 @@ const cli = meow(`
     $ ebterminate unicorns --region eu-west-1
 `);
 
-terminate(cli.input[0], {region: cli.flags.region});
+terminate(cli.input[0], {region: cli.flags.region}).then((result) => {
+  console.log(result);
+}).catch((err) => {
+  console.log(err);
+});

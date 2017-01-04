@@ -27,15 +27,15 @@ const retrieveEnvironments = (eb, appName) => {
 };
 
 module.exports = (opts) => {
-  opts = opts || {};
-
-  AWS.config = {
-    region: opts.region || process.env.AWS_REGION
-  };
-
-  const eb = new AWS.ElasticBeanstalk();
-
   return new Promise((resolve, reject) => {
+    opts = opts || {};
+
+    AWS.config = {
+      region: opts.region || process.env.AWS_REGION
+    };
+
+    const eb = new AWS.ElasticBeanstalk();
+
     eb.describeApplications({}, (err, data) => {
       if (err) {
         reject(err);

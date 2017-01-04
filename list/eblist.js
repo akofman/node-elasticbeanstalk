@@ -12,14 +12,7 @@ const cli = meow(`
 
   Examples
     $ eblist
-    Application Name:
-      my-wonderful-app
-    Environments:
-      dev
-        currentVersion: app-161107_120345
-        cname: dev.eu-west-1.elasticbeanstalk.com
-        lastUpdate: Tue Nov 08 2016 10:20:31 GMT+0100 (CET)
-        status: Ready
+    $ eblist --region eu-west-1
 `);
 
 list({region: cli.flags.region}).then((list) => {
