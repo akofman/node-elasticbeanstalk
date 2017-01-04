@@ -15,7 +15,7 @@
   },
   "files": [
     "index.js",
-    "list.js"
+    "eblist.js"
   ],
   "keywords": [
     "cli",
@@ -25,6 +25,7 @@
     "elasticbeanstalk-list"
   ],
   "dependencies": {
-    "aws-sdk": "2.7.15"
+    "aws-sdk": "2.7.15",
+    "meow": "3.7.0"
   }
 }

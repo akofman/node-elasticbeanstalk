@@ -1,4 +1,4 @@
-# node-elasticbeanstalk-deploy [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk-deploy.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk-deploy)
+# node-elasticbeanstalk-list [![Build Status](https://travis-ci.org/akofman/node-elasticbeanstalk-list.svg?branch=master)](https://travis-ci.org/akofman/node-elasticbeanstalk-list)
 
 >
 
@@ -6,59 +6,59 @@
 ## Install
 
 ```
-$ npm install --save node-elasticbeanstalk-deploy
+$ npm install --save node-elasticbeanstalk-list
 ```
 
 
 ## Usage
 
 ```js
-const ebdeploy= require('node-elasticbeanstalk-deploy');
+const eblist= require('node-elasticbeanstalk-list');
 
-ebdeploy('unicorns');
+eblist().then((apps) => {
+  console.log(apps);
+});
 ```
 
 
 ## API
 
-### ebdeploy(environment, [options])
-
-#### environment
-
-Type: `string`
-
-Lorem ipsum.
+### eblist([options])
 
 #### options
 
-##### foo
+##### region
 
-Type: `boolean`<br>
-Default: `false`
+Type: `string`<br>
 
-Lorem ipsum.
-
+The region where your Elastic Beanstalk is deployed. This is an optional parameter because it should be defined from
+the `AWS_REGION` env variable, but for some cases it could be convenient to override it.
 
 ## CLI
 
 ```
-$ npm install --global node-elasticbeanstalk-deploy
+$ npm install --global node-elasticbeanstalk-list
 ```
 
 ```
-$ ebdeploy --help
+$ eblist --help
 
   Usage
-    ebdeploy [input]
+    eblist
 
   Options
-    --foo  Lorem ipsum [Default: false]
+    --region  the region where the Elastic Beanstalk is deployed
 
   Examples
-    $ <%= moduleName %>
-    unicorns & rainbows
-    $ <%= moduleName %> ponies
-    ponies & rainbows
+    $ eblist
+    Application Name:
+      my-wonderful-app
+    Environments:
+      dev
+        currentVersion: app-161107_120345
+        cname: dev.eu-west-1.elasticbeanstalk.com
+        lastUpdate: Tue Nov 08 2016 10:20:31 GMT+0100 (CET)
+        status: Ready
 ```
 
 

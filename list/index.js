@@ -1,7 +1,6 @@
 const AWS = require('aws-sdk');
-const eb = new AWS.ElasticBeanstalk();
 
-const retrieveEnvironments = (appName) => {
+const retrieveEnvironments = (eb, appName) => {
   return new Promise((resolve, reject) => {
     const appData = {
       appName: appName,
@@ -34,6 +33,8 @@ module.exports = (opts) => {
     region: opts.region || process.env.AWS_REGION
   };
 
+  const eb = new AWS.ElasticBeanstalk();
+
   return new Promise((resolve, reject) => {
     eb.describeApplications({}, (err, data) => {
       if (err) {
@@ -47,7 +48,7 @@ module.exports = (opts) => {
         let messages = '';
 
         data.Applications.forEach((app) => {
-          promises.push(retrieveEnvironments(app.ApplicationName));
+          promises.push(retrieveEnvironments(eb, app.ApplicationName));
         });
 
         Promise.all(promises).then((promise) => {
