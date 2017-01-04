@@ -1,0 +1,31 @@
+{
+  "name": "node-elasticbeanstalk-terminate",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "akofman/node-elasticbeanstalk",
+  "author": {
+    "name": "Alexis Kofman",
+    "email": "alexis.kofman@gmail.com",
+    "url": "http://twitter.com/alexiskofman"
+  },
+  "bin": "ebterminate.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js",
+    "ebterminate.js"
+  ],
+  "keywords": [
+    "cli",
+    "cli-app",
+    "aws",
+    "elasticbeanstalk",
+    "elasticbeanstalk-terminate"
+  ],
+  "dependencies": {
+    "aws-sdk": "2.7.15",
+    "meow": "3.7.0"
+  }
+}
