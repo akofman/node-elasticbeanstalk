@@ -13,5 +13,8 @@
     "email": "alexis.kofman@gmail.com",
     "url": "http://twitter.com/alexiskofman"
   },
+  "scripts": {
+    "test": "eslint deploy/*.js list/*.js terminate/*.js"
+  },
   "license": "MIT"
 }
