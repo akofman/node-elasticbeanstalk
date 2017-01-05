@@ -18,7 +18,7 @@ const cli = meow(`
     $ ebdeploy unicorns --src https://github.com/akofman/unicorns.git:www
 `);
 
-deploy(cli.input[0], {src: cli.flags.src}).then((result) => {
+deploy(cli.input[0], {src: cli.flags.src, region: cli.flags.region}).then((result) => {
   console.log(result);
 }).catch((err) => {
   console.log(err);

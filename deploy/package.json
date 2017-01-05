@@ -1,6 +1,6 @@
 {
   "name": "node-elasticbeanstalk-deploy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AWS Elastic Beanstalk CLI and API to deploy a new version of a specified environment",
   "license": "MIT",
   "repository": "akofman/node-elasticbeanstalk",
